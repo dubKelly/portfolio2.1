@@ -77,7 +77,13 @@ span {
 	position: fixed;
 	top: 30px;
 	left: 30px;
+	z-index: 1;
+	transition: all .3s ease-in-out;
 	animation: homeLoad 3s linear;
+}
+.home.scrolled {
+	top: 15px;
+	left: 30px;
 }
 .landing h1 {
 	color: #a83519;
@@ -90,7 +96,40 @@ span {
 	font-size: 17.5px;
 	padding: 0 0 0 3px;
 	font-weight: 500;
+}
+.fName.scrolled {
+	padding: 0;
+}
+.fOut {
+	display: inline;
+	transition: all .3s ease-in-out;
 	animation: fNameLoad 3s ease-in-out;
+}
+.fOut.scrolled {
+	font-size: 18px;
+	letter-spacing: -2px;
+	height: 20px;
+}
+.fMid {
+	display: inline;
+	animation: fNameLoad 3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.fMid.scrolled {
+	font-size: 0px;
+	opacity: 0;
+}
+.line {
+	width: 0px;
+	height: 0px;
+	background-color: white;
+	opacity: 0;
+	transition: all .3s ease-in-out;
+}
+.line.scrolled {
+	width: 100%;
+	height: 1px;
+	opacity: 0.3; 
 }
 .jTitle {
 	font-family: "Poiret One", cursive;
@@ -98,12 +137,37 @@ span {
 	padding: 0 0 0 2px;
 	color: white;
 	text-transform: capitalize;
+	transition: all .3s ease-in-out;
 	animation: jTitleLoad 3s ease-in-out;
+}
+.jTitle.scrolled {
+	font-size: 0px;
+	opacity: 0;
 }
 .lName {
 	font-size: 30px;
 	letter-spacing: -2px;
+}
+.lName.scrolled {
+	line-height: 0.3;
+}
+.lOut {
+	display: inline;
+	transition: all .3s ease-in-out;
 	animation: lNameLoad 3s ease-in-out;
+}
+.lOut.scrolled {
+	font-size: 17.5px;
+	font-weight: 500;
+}
+.lMid {
+	display: inline;
+	animation: lNameLoad 3s ease-in-out;
+	transition: all .3s ease-in-out
+}
+.lMid.scrolled {
+	font-size: 0px;
+	opacity: 0;
 }
 .deltaXi {
 	font-family: "Roboto", sans-serif;
@@ -172,6 +236,10 @@ span {
 	top: 0;
 	right: 0;
 	width: 100%;
+	transition: background-color .2s ease-in-out;
+}
+.header.scrolled {
+	background-color: rgba(38, 38, 38, 0.9);
 }
 .nav {
 	text-align: right;
@@ -183,6 +251,10 @@ span {
 	display: inline-block;
 	position: relative;
 	margin: 30px 0px;
+	transition: margin .3s ease-in-out;
+}
+.container.scrolled {
+	margin: 20px 0px;
 }
 a {
 	text-decoration: none;
@@ -248,5 +320,8 @@ a:hover::after {
 	}
 	.container {
 		margin: 30px 15px;
+	}
+	.container.scrolled {
+		margin: 20px 15px;
 	}
 }
