@@ -55,11 +55,19 @@ span {
 @keyframes h2Load {
 	0% {
 		opacity: 0;
-		right: 20%;
+		right: 30px;
+	}
+	79% {
+		opacity: 0;
+		right: 30px;
 	}
 	80% {
 		opacity: 0;
-		right: 20%;
+		right: 0px;
+	}
+	100% {
+		opacity: 1;
+		right: 30px;
 	}
 }
 
@@ -159,19 +167,22 @@ span {
 
 
 /*** Nav ***/
-.nav {
+.header {
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
+}
+.nav {
 	text-align: right;
 	padding: 0 15px 0 0;
+	visibility: hidden;
 	animation: navLoad 4s ease-in-out;
 }
 .container {
 	display: inline-block;
 	position: relative;
-	margin: 30px 15px;
+	margin: 30px 0px;
 }
 a {
 	text-decoration: none;
@@ -204,5 +215,38 @@ a:hover::after {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@media only screen and (min-width: 475px) {
+	.landing h2 {
+		right: 33%;
+		-webkit-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
+	}
+		@keyframes h2Load {
+		0% {
+			opacity: 0;
+			right: 33%;
+		}
+		79% {
+			opacity: 0;
+			right: 33%;
+		}
+		80% {
+			opacity: 0;
+			right: 20%;
+		}
+		100% {
+			opacity: 1;
+			right: 33%;
+		}
+	}
+}
+@media only screen and (min-width: 550px) {
+	.nav {
+		visibility: visible;
+	}
+	.container {
+		margin: 30px 15px;
 	}
 }
