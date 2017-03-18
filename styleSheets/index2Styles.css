@@ -1,0 +1,208 @@
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+section {
+	width: 100%;
+	height: 100%;
+}
+span {
+	display: block;
+}
+
+
+/* Sect. Landing */
+.landing {
+	background-image: url("../images/landingLrg.jpg");
+	background-size: cover;
+	background-position: left;
+	background-attachment: fixed;
+}
+.lWrap {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(38, 38, 38, 0.92);
+	animation: lWrapLoad 4s ease-in-out;
+}
+@keyframes lWrapLoad {
+	0% {
+		background-color: rgba(38, 38, 38, 1);
+	}
+	70% {
+		background-color: rgba(38, 38, 38, 1);
+	}
+}
+.landing h2 {
+	display: inline-block;
+	position: relative;
+	float: right;
+	top: 66%;
+	right: 30px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	color: white;
+	font-size: 240%;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 0.85;
+	animation: h2Load 4s ease-out;
+}
+.pow {
+	color: #a83519;
+}
+@keyframes h2Load {
+	0% {
+		opacity: 0;
+		right: 20%;
+	}
+	80% {
+		opacity: 0;
+		right: 20%;
+	}
+}
+
+
+/*** Home ***/
+.home {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	animation: homeLoad 3s linear;
+}
+.landing h1 {
+	color: #a83519;
+	text-transform: uppercase;
+	line-height: 0.9;
+	margin: 0;
+	text-align: center;
+}
+.fName {
+	font-size: 17.5px;
+	padding: 0 0 0 3px;
+	font-weight: 500;
+	animation: fNameLoad 3s ease-in-out;
+}
+.jTitle {
+	font-family: "Poiret One", cursive;
+	font-size: 9.3px;
+	padding: 0 0 0 2px;
+	color: white;
+	text-transform: capitalize;
+	animation: jTitleLoad 3s ease-in-out;
+}
+.lName {
+	font-size: 30px;
+	letter-spacing: -2px;
+	animation: lNameLoad 3s ease-in-out;
+}
+.deltaXi {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	display: inline;
+	color: #424242;
+}
+@keyframes homeLoad {
+	0% {
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	92% {
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		top: 30px;
+		left: 30px;
+	}
+}
+@keyframes fNameLoad {
+	0% {
+		opacity: 0;
+		font-size: 35.5px;
+	}
+	40% {opacity: 1;}
+	92% {font-size: 35.5px;}
+	100% {font-size: 17.5px;}
+}
+@keyframes jTitleLoad {
+	0% {
+		opacity: 0;
+		font-size: 0px;
+	}
+	40% {
+		opacity: 0;
+		font-size: 0px;
+	}
+	75% {
+		opacity: 1;
+		font-size: 18px;
+	}
+	92% {font-size: 18px;}
+	100% {font-size: 9.3px;}
+}
+@keyframes lNameLoad {
+	0% {
+		opacity: 0;
+		font-size: 60px;
+	}
+	20% {opacity: 0;}
+	60% {opacity: 1;}
+	92% {font-size: 60px;}
+	100% {font-size: 30px;}
+}
+
+
+/*** Nav ***/
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	text-align: right;
+	padding: 0 15px 0 0;
+	animation: navLoad 4s ease-in-out;
+}
+.container {
+	display: inline-block;
+	position: relative;
+	margin: 30px 15px;
+}
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #a83519;
+	font-size: 80%;
+	font-weight: 500;
+}
+a::after {
+	position: absolute;
+	top: 130%;
+	left: 50%;
+	width: 0.001px;
+	height: 1px;
+	content: "";
+	background-color: white;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	transition: all .15s ease-in-out;
+}
+a:hover::after {
+	width: 100%;
+}
+@keyframes navLoad {
+	0% {
+		opacity: 0;
+	}
+	85% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
