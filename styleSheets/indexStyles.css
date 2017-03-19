@@ -17,7 +17,7 @@ span {
 .landing {
 	background-image: url("../images/landingLrg.jpg");
 	background-size: cover;
-	background-position: left;
+	background-position: 0% 50%;
 	background-attachment: fixed;
 }
 .lWrap {
@@ -106,7 +106,7 @@ span {
 	animation: fNameLoad 3s ease-in-out;
 }
 .fOut.scrolled {
-	font-size: 18px;
+	font-size: 19px;
 	letter-spacing: -2px;
 	height: 20px;
 }
