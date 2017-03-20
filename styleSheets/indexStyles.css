@@ -289,6 +289,45 @@ a:hover::after {
 		opacity: 1;
 	}
 }
+
+
+/*** GoodBurger ***/
+.goodBurger {
+	position: fixed;
+	top: 35px;
+	right: 35px;
+	height: 26px;
+	width: 30px;
+}
+.goodBurger span {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #a83519;
+	left: 0;
+	z-index: 3;
+	transition: all 2s ease-in-out;
+}
+.goodBurger span:nth-child(1) {
+	top: 0px;
+}
+.goodBurger span:nth-child(2), .goodBurger span:nth-child(3) {
+	top: 12px;
+}
+.goodBurger span:nth-child(4) {
+	top: 24px;
+}
+.goodBurger.open span:nth-child(1), .goodBurger.open span:nth-child(4) {
+	top: 12px;
+	width: 0px;
+	left: 50%;
+}
+.goodBurger.open span:nth-child(2) {
+	transform: rotate(-45deg);
+}
+.goodBurger.open span:nth-child(3) {
+	transform: rotate(45deg);
+}
 @media only screen and (min-width: 475px) {
 	.landing h2 {
 		right: 33%;
