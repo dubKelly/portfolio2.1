@@ -3,6 +3,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
+	background-color: #262626;
 	animation: bodyLoad 3s linear;
 }
 @keyframes bodyLoad {
@@ -28,6 +29,10 @@ span {
 	background-size: cover;
 	background-position: 0% 50%;
 	background-attachment: fixed;
+	transition: all .2s ease-in-out;
+}
+.landing.open {
+	filter: blur(5px);
 }
 .lWrap {
 	width: 100%;
@@ -355,7 +360,7 @@ a:hover::after {
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(38, 38, 38, 0.95);
+	background-color: rgba(38, 38, 38, 0.7);
 	text-align: center;
 	opacity: 0;
 	z-index: -1;
@@ -397,6 +402,9 @@ a:hover::after {
 @media only screen and (min-width: 550px) {
 	.goodBurger {
 		visibility: hidden;
+	}
+	.goodBurger.open {
+		visibility: visible;
 	}
 	.nav {
 		visibility: visible;
