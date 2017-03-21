@@ -298,6 +298,8 @@ a:hover::after {
 	right: 35px;
 	height: 26px;
 	width: 30px;
+	transition: all .3s ease-in-out;
+	animation: burgerLoad 4s ease-in-out;
 }
 .goodBurger span {
 	position: absolute;
@@ -306,7 +308,7 @@ a:hover::after {
 	background-color: #a83519;
 	left: 0;
 	z-index: 3;
-	transition: all 2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
 .goodBurger span:nth-child(1) {
 	top: 0px;
@@ -327,6 +329,15 @@ a:hover::after {
 }
 .goodBurger.open span:nth-child(3) {
 	transform: rotate(45deg);
+}
+.goodBurger.scrolled {
+	top: 18px;
+	right: 35px;
+}
+@keyframes burgerLoad {
+	0% {opacity: 0}
+	85% {opacity: 0}
+	100% {opacity: 1}
 }
 @media only screen and (min-width: 475px) {
 	.landing h2 {
@@ -354,6 +365,9 @@ a:hover::after {
 	}
 }
 @media only screen and (min-width: 550px) {
+	.goodBurger {
+		visibility: hidden;
+	}
 	.nav {
 		visibility: visible;
 	}
