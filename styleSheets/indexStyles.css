@@ -257,7 +257,7 @@ span {
 }
 .nav {
 	text-align: right;
-	padding: 0 15px 0 0;
+	padding: 0 19px 0 0;
 	visibility: hidden;
 	animation: navLoad 4s ease-in-out;
 }
@@ -414,5 +414,46 @@ a:hover::after {
 	}
 	.container.scrolled {
 		margin: 20px 15px;
+	}
+}
+@media only screen and (min-width: 700px) and (min-height: 700px) {
+	.home {
+		top: 45px;
+		left: 45px;
+	}
+	.home.scrolled {
+		top: 13px;
+		left: 45px;
+	}
+	.fName {
+		font-size: 29.5px;
+		padding: 0 0 0 4px;
+	}
+	.fOut.scrolled {
+		font-size: 25px;
+	}
+	.jTitle {
+		font-size: 15px;
+	}
+	.lName {
+		font-size: 51.5px;
+	}
+	.lName.scrolled {
+		line-height: 0.08;
+	}
+	.lOut.scrolled {
+		font-size: 23px;
+	}
+	.nav {
+		padding: 0 45px 0 0;
+	}
+	.container {
+		margin: 45px 25px;
+	}
+	.container.scrolled {
+		margin: 30px 25px;
+	}
+	.landing h2 {
+		font-size: 360%;
 	}
 }
