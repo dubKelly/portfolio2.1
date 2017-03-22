@@ -99,6 +99,9 @@ span {
 	top: 13px;
 	left: 30px;
 }
+.noLine::after {
+	display: none;
+}
 .landing h1 {
 	color: #a83519;
 	text-transform: uppercase;
@@ -147,7 +150,7 @@ span {
 }
 .jTitle {
 	font-family: "Poiret One", cursive;
-	font-size: 9.3px;
+	font-size: 8.5px;
 	padding: 0 0 0 2px;
 	color: white;
 	text-transform: capitalize;
@@ -159,7 +162,7 @@ span {
 	opacity: 0;
 }
 .lName {
-	font-size: 30px;
+	font-size: 31px;
 	letter-spacing: -2px;
 }
 .lName.scrolled {
@@ -230,16 +233,16 @@ span {
 		font-size: 18px;
 	}
 	92% {font-size: 18px;}
-	100% {font-size: 9.3px;}
+	100% {font-size: 8.5px;}
 }
 @keyframes lNameLoad {
 	0% {
 		opacity: 0;
-		font-size: 60px;
+		font-size: 60.5px;
 	}
 	20% {opacity: 0;}
 	60% {opacity: 1;}
-	92% {font-size: 60px;}
+	92% {font-size: 60.5px;}
 	100% {font-size: 30px;}
 }
 
@@ -292,6 +295,9 @@ a::after {
 a:hover::after {
 	width: 100%;
 }
+.clicked::after {
+	width: 0.001px;
+}
 @keyframes navLoad {
 	0% {
 		opacity: 0;
@@ -312,8 +318,9 @@ a:hover::after {
 	right: 35px;
 	height: 26px;
 	width: 30px;
-	transition: all .3s ease-in-out;
+	cursor: pointer;
 	z-index: 3;
+	transition: all .3s ease-in-out;
 	animation: burgerLoad 4s ease-in-out;
 }
 .goodBurger span {
@@ -439,7 +446,7 @@ a:hover::after {
 		font-size: 51.5px;
 	}
 	.lName.scrolled {
-		line-height: 0.08;
+		line-height: 0.05;
 	}
 	.lOut.scrolled {
 		font-size: 23px;
@@ -455,5 +462,58 @@ a:hover::after {
 	}
 	.landing h2 {
 		font-size: 360%;
+	}
+	@keyframes homeLoad {
+		0% {
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		92% {
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		100% {
+			top: 45px;
+			left: 45px;
+		}
+	}
+	@keyframes fNameLoad {
+		0% {
+			opacity: 0;
+			font-size: 60px;
+		}
+		40% {opacity: 1;}
+		92% {font-size: 60px;}
+		100% {font-size: 29.5px;}
+	}
+	@keyframes jTitleLoad {
+		0% {
+			opacity: 0;
+			font-size: 0px;
+		}
+		40% {
+			opacity: 0;
+			font-size: 0px;
+		}
+		75% {
+			opacity: 1;
+			font-size: 31px;
+		}
+		92% {font-size: 31px;}
+		100% {font-size: 15px;}
+	}
+	@keyframes lNameLoad {
+		0% {
+			opacity: 0;
+			font-size: 104px;
+		}
+		20% {opacity: 0;}
+		60% {opacity: 1;}
+		92% {font-size: 104px;}
+		100% {font-size: 51.5px;}
 	}
 }
