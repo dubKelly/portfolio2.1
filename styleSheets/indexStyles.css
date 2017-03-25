@@ -29,7 +29,9 @@ span {
 	background-size: cover;
 	background-position: 0% 50%;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	transition: all .2s ease-in-out;
+	will-change: scroll-position;
 }
 .landing.open {
 	filter: blur(5px);
@@ -380,6 +382,20 @@ a:hover::after {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+
+/* About */
+.about {
+	background-image: url("../images/aboutLrg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.test {
+	height: 300px;
+	width: 100%;
+	background-color: white;
 }
 @media only screen and (min-width: 475px) {
 	.landing h2 {
