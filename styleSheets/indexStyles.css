@@ -18,6 +18,13 @@ section {
 	width: 100%;
 	height: 100%;
 }
+.hide {
+	animation: hideLoad 4s linear;
+}
+@keyframes hideLoad {
+	0% {opacity: 0;}
+	100% {opacity: 0;}
+}
 span {
 	display: block;
 }
@@ -413,8 +420,12 @@ a:hover::after {
 	transform: translate(-50%, -50%);
 	font-size: 12px;
 	text-align: center;
+	opacity: 0;
+	transition: opacity .8s ease-in-out;
 }
-
+.about p.scrolled {
+	opacity: 1;
+}
 @media only screen and (min-width: 475px) {
 	.landing h2 {
 		right: 33%;

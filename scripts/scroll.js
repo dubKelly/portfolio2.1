@@ -17,13 +17,12 @@
 	function paint() {
 		ticking = false;
 		var currentScroll = latestScroll;
-		if (currentScroll > 0) {
-			for (var i = scroll.length - 1; i >= 0; i--) {
+		for (var i = scroll.length - 1; i >= 0; i--) {
+			var y = scroll[i].getAttribute("data-scrollPoint");
+			if (currentScroll > (window.innerHeight * y)) {
 				scroll[i].classList.add("scrolled");
 			}
-		}
-		else {
-			for (var i = scroll.length - 1; i >= 0; i--) {
+			else {
 				scroll[i].classList.remove("scrolled");
 			}
 		}
