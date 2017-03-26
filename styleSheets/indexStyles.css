@@ -19,11 +19,12 @@ section {
 	height: 100%;
 }
 .hide {
-	animation: hideLoad 4s linear;
+	animation: hideLoad 4.5s ease-in-out;
 }
 @keyframes hideLoad {
 	0% {opacity: 0;}
-	100% {opacity: 0;}
+	90% {opacity: 0;}
+	100% {opacity: 1;}
 }
 span {
 	display: block;
@@ -418,6 +419,7 @@ a:hover::after {
 	top: calc(50% + 19px);
 	left: 33%;
 	transform: translate(-50%, -50%);
+	padding: 6px 0;
 	font-size: 12px;
 	text-align: center;
 	opacity: 0;
