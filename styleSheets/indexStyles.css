@@ -21,6 +21,9 @@ section {
 span {
 	display: block;
 }
+.blur.open {
+	filter: blur(5px);
+}
 
 
 /* Sect. Landing */
@@ -33,9 +36,6 @@ span {
 	position: relative;
 	z-index: 1;
 	transition: all .2s ease-in-out;
-}
-.landing.open {
-	filter: blur(5px);
 }
 .lWrap {
 	width: 100%;
@@ -414,9 +414,7 @@ a:hover::after {
 	font-size: 12px;
 	text-align: center;
 }
-.about p::first-letter {
-	color: red;
-}
+
 @media only screen and (min-width: 475px) {
 	.landing h2 {
 		right: 33%;

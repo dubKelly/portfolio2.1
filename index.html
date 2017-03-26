@@ -9,6 +9,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<title></title>
 </head>
+<!--
+- data-* fade-in points
+- redirect .html/#about to landing onload
+- nav pagination
+-->
 <body>
 		<div class="goodBurger scroll">
 			<span></span>
@@ -19,16 +24,16 @@
 		<div class="mobileNav">
 			<div class="mWrap">
 				<div class="container scrolled">
-					<a href="#">Home</a>
+					<a class="mNavList" href="#landing">Home</a>
 				</div><br>
 				<div class="container scrolled">
-					<a href="#">About</a>
+					<a class="mNavList" href="#about">About</a>
 				</div><br>
 				<div class="container scrolled">
-					<a href="#">Work</a>
+					<a class="mNavList" href="#">Work</a>
 				</div><br>
 				<div class="container scrolled">
-					<a href="#">Contact</a>
+					<a class="mNavList" href="#">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -48,7 +53,7 @@
 					<a href="#landing">Home</a>
 				</div>
 				<div class="container scroll">
-					<a href="#">About</a>
+					<a href="#about">About</a>
 				</div>
 				<div class="container scroll">
 					<a href="#">Work</a>
@@ -61,7 +66,7 @@
 		<h2 class="hook fade">Let's<span class="pow">Create</span>Something.</h2>
 	</div>
 </section>
-<section class="about">
+<section id="about" class="about blur">
 	<h1>About</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

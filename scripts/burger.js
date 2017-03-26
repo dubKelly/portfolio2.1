@@ -3,8 +3,8 @@
 	var nav = document.getElementsByClassName("mobileNav");
 	var blur = document.getElementsByClassName("blur");
 	var toggle = 0;
-	gBurg[0].onclick = function() {
-			this.classList.toggle("open");
+	var navOpen = function() {
+			gBurg[0].classList.toggle("open");
 			nav[0].classList.toggle("open");
 			for (var i = blur.length - 1; i >= 0; i--) {
 				blur[i].classList.toggle("open");
@@ -19,5 +19,10 @@
 				nav[0].style.zIndex = "-1";
 			}, 200);
 		}
+	}
+	gBurg[0].addEventListener("click", navOpen, false);
+	var mNav = document.getElementsByClassName("mNavList");
+	for (var i = mNav.length - 1; i >= 0; i--) {
+		mNav[i].addEventListener("click", navOpen, false);
 	}
 }());
