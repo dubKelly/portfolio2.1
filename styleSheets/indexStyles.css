@@ -303,7 +303,7 @@ a::after {
 	transform: translateX(-50%);
 	transition: all .15s ease-in-out;
 }
-a:hover::after {
+a:hover::after, a.page::after {
 	width: 100%;
 }
 .clicked::after {

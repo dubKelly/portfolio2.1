@@ -30,6 +30,19 @@
 		if ((currentScroll / (window.innerHeight / 3)) <= 1.5) {
 			fade[0].style.opacity = 1 - (currentScroll / (window.innerHeight / 3));
 		}
+		function pagination() {
+			var mainNav = document.getElementsByClassName("mainNav");
+			var pageTop = [0, 1, 2, 3];
+			for (var i = mainNav.length - 1; i >= 0; i--) {
+				if (currentScroll >= (window.innerHeight * pageTop[i]) && currentScroll < (window.innerHeight * pageTop[i + 1])) {
+					mainNav[i].classList.add("page");
+				}
+				else {
+					mainNav[i].classList.remove("page");
+				}
+			}
+		}
+		pagination();
 		// if (currentScroll <= window.innerHeight) {
 		// 	lax[0].style.backgroundPosition = "0% " + (((currentScroll / window.innerHeight) * 50) + 50) + "%";
 		// }
