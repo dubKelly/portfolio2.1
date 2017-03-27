@@ -378,7 +378,7 @@ a:hover::after {
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(38, 38, 38, 0.7);
+	background-color: rgba(38, 38, 38, 0.8);
 	text-align: center;
 	opacity: 0;
 	z-index: -1;
