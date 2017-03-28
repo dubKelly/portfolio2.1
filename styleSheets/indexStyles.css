@@ -27,7 +27,7 @@ section {
 	90% {opacity: 0;}
 	100% {opacity: 1;}
 }
-p {
+p, li {
 	color: #262626;
 }
 span {
@@ -299,7 +299,7 @@ a::after {
 	position: absolute;
 	top: 130%;
 	left: 50%;
-	width: 0.001px;
+	width: 0.0001px;
 	height: 1px;
 	content: "";
 	background-color: white;
@@ -311,7 +311,7 @@ a:hover::after, a.page::after {
 	width: 100%;
 }
 .clicked::after {
-	width: 0.001px;
+	width: 0.0001px;
 }
 @keyframes navLoad {
 	0% {
@@ -420,16 +420,8 @@ a:hover::after, a.page::after {
 	transform: rotate(90deg);
 	z-index: 0;
 }
-.blurb {
-	width: 66%;
-	position: relative;
-	top: calc(45% + 29px);
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 .about p {
 	padding: 6px 0;
-	font-size: 12px;
 	text-align: center;
 	opacity: 0;
 	transition: opacity .8s ease-in-out;
@@ -447,8 +439,8 @@ a:hover::after, a.page::after {
 	position: absolute;
 	top: calc(20% + 29px);
 	left: 50%;
-	transform: translate(-50%, -50%);
-	display: none;
+	transform: translateX(-50%);
+	/*display: none;*/
 }
 .arrow:hover {
 	cursor: pointer;
@@ -459,6 +451,45 @@ a:hover::after, a.page::after {
 .arrow:hover .polygon {
 	fill: #262626;
 }
+
+
+/*** Blurb ***/
+.blurb {
+	width: 66%;
+	position: relative;
+	top: calc(45% + 29px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+}
+.intro {
+	display: none;
+}
+.skillToggle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.skillToggle li {
+	text-align: right;
+}
+.skillToggle li:hover {
+	color: #262626;
+	cursor: pointer;
+}
+.about ul {
+	padding: 6px 0;
+}
+.skills li {
+	color: #424242;
+	transition: all .2s ease-in-out;
+}
+.skills li.focus {
+	color: #262626;
+}
+.soft li {
+	text-align: right;
+}
 @media only screen and (orientation: landscape) {
 	.blurb {
 		width: 50%;
@@ -466,6 +497,9 @@ a:hover::after, a.page::after {
 	}
 	.next {
 		top: 80%;
+		left: 33%;
+	}
+	.prev {
 		left: 33%;
 	}
 }
