@@ -423,28 +423,13 @@ a:hover::after, a.page::after {
 .about p {
 	padding: 6px 0;
 	text-align: center;
-	opacity: 0;
 	transition: opacity .8s ease-in-out;
-}
-.about p.scrolled {
-	opacity: 1;
 }
 .next {
 	position: absolute;
 	top: 75%;
 	left: 50%;
 	transform: translateX(-50%);
-}
-.prev {
-	position: absolute;
-	top: calc(20% + 29px);
-	left: 50%;
-	transform: translateX(-50%);
-	transition: opacity 2s ease-in-out;
-	visibility: hidden;
-}
-.prev.hide {
-	opacity: 0;
 }
 .arrow:hover {
 	cursor: pointer;
@@ -459,25 +444,32 @@ a:hover::after, a.page::after {
 
 /*** Blurb ***/
 .blurb {
-	width: 66%;
+	display: block;
+	width: 100%;
+	height: calc(100% - 59px);
+	overflow-y: scroll;
 	position: relative;
-	top: calc(45% + 29px);
-	left: 50%;
-	transform: translate(-50%, -50%);
+	top: 59px;
+	left: 0;
 	font-size: 12px;
 }
-.cv {
-	opacity: 1;
-	transition: opacity 2s ease-in-out;
+.blurb::-webkit-scrollbar {
+	display: none;
 }
-.cv.hide {
-	opacity: 0;
+.aboutSect {
+	height: 100%;
+}
+.aboutContainer {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 66%;
+	transform: translate(-50%, -50%);
 }
 .skills {
-	visibility: hidden;
+	display: none;
 }
 .skillToggle {
-	position: absolute;
 	top: 0px;
 	right: 0px;
 }
@@ -503,15 +495,12 @@ a:hover::after, a.page::after {
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
+		width: 100%;
+		left: 0;
+	}
+	.aboutContainer {
+		left: 33%;
 		width: 50%;
-		left: 33%;
-	}
-	.next {
-		top: 80%;
-		left: 33%;
-	}
-	.prev {
-		left: 33%;
 	}
 }
 @media only screen and (min-width: 475px) {

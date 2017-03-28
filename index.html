@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="styleSheets/indexStyles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<title></title>
-</head>
 <!--
 _____________________________________________________________________
 _____________________________________________________________________
@@ -35,8 +34,8 @@ _____________________________________________________________________
 _____________________________________________________________________
 _____________________________________________________________________
 
-- nav pagination
 -->
+</head>
 <body>
 		<div class="goodBurger scroll" data-scrollPoint="0">
 			<span></span>
@@ -92,45 +91,46 @@ _____________________________________________________________________
 <section id="about" class="about blur hide">
 	<h1>About</h1>
 	<div class="blurb">
-		<div class="intro cv">
-			<p class="scroll" data-scrollPoint="0.8">Originally from St. Jacobs, I recently moved to Toronto where I spend an unhealthy amount of time coding for the web.</p>
-			<p class="scroll" data-scrollPoint="0.9">Hit me up if you have a project and let's see if we can make something happen.</p>
+		<div class="intro aboutSect">
+			<div class="aboutContainer">
+				<p>Originally from St. Jacobs, I recently moved to Toronto where I spend an unhealthy amount of time coding for the web.</p>
+				<p>Hit me up if you have a project and let's see if we can make something happen.</p>
+			</div>
 		</div>
-		<div class="skills cv hide">
-			<div class="skillToggle">
-				<ul>
-					<li class="sToggle focus">Hard</li>
-					<li class="sToggle">Soft</li>
-				</ul>
-			</div>
-			<div class="hard">
-				<ul>
-					<li class="focus">Responsive Design</li>
-					<li class="focus">Search Engine Optimization</li>
-					<li class="focus">Cross-Browser Compatibility</li>
-					<li class="focus">Form Security</li>
-					<li class="focus">Content Management</li>
-					<li class="focus">E-Commerce</li>
-				</ul>
-			</div>
-			<div class="soft">
-				<ul>
-					<li>Detail Orientated</li>
-					<li>Problem Solver</li>
-					<li>Creative</li>
-					<li>Innovative</li>
-				</ul>
+		<div class="skills aboutSect">
+			<div class="aboutContainer">
+				<div class="skillToggle">
+					<ul>
+						<li class="sToggle focus">Hard</li>
+						<li class="sToggle">Soft</li>
+					</ul>
+				</div>
+				<div class="hard">
+					<ul>
+						<li class="focus">Responsive Design</li>
+						<li class="focus">Search Engine Optimization</li>
+						<li class="focus">Cross-Browser Compatibility</li>
+						<li class="focus">Form Security</li>
+						<li class="focus">Content Management</li>
+						<li class="focus">E-Commerce</li>
+					</ul>
+				</div>
+				<div class="soft">
+					<ul>
+						<li>Detail Orientated</li>
+						<li>Problem Solver</li>
+						<li>Creative</li>
+						<li>Innovative</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-	<svg class="next arrow" enable-background="new 0 0 50 50" height="32px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon class="polygon" fill="#424242" points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg>
-	<svg class="prev arrow hide" enable-background="new 0 0 50 50" height="30px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon class="polygon" fill="#424242" points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 " transform="rotate(180 25 25)"/></svg>
-	<div class="blurb">
+	<!-- <svg class="next arrow" enable-background="new 0 0 50 50" height="32px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon class="polygon" fill="#424242" points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg>-->
 </section>
 <script type="text/javascript" src="scripts/scroll.js"></script>
 <script type="text/javascript" src="scripts/burger.js"></script>
 <script type="text/javascript" src="scripts/sticky.js"></script>
 <script type="text/javascript" src="scripts/skillToggle.js"></script>
-<script type="text/javascript" src="scripts/cvHide.js"></script>
 </body>
 </html>

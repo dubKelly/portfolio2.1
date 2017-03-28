@@ -43,6 +43,14 @@
 				mainNav[i].classList.remove("page");
 			}
 		}
+		/*** cvScroll ***/
+		var skills = document.getElementsByClassName("skills");
+		if (currentScroll === window.innerHeight) {
+			skills[0].style.display = "block";
+		}
+		else {
+			skills[0].style.display = "none";
+		}
 		// /*** parallaxBackground ***/
 		// if (currentScroll <= window.innerHeight) {
 		// 	lax[0].style.backgroundPosition = "0% " + (((currentScroll / window.innerHeight) * 50) + 50) + "%";
