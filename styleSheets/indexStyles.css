@@ -431,7 +431,7 @@ a:hover::after, a.page::after {
 }
 .next {
 	position: absolute;
-	top: 66%;
+	top: 75%;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -440,7 +440,11 @@ a:hover::after, a.page::after {
 	top: calc(20% + 29px);
 	left: 50%;
 	transform: translateX(-50%);
-	/*display: none;*/
+	transition: opacity 2s ease-in-out;
+	visibility: hidden;
+}
+.prev.hide {
+	opacity: 0;
 }
 .arrow:hover {
 	cursor: pointer;
@@ -462,8 +466,15 @@ a:hover::after, a.page::after {
 	transform: translate(-50%, -50%);
 	font-size: 12px;
 }
-.intro {
-	display: none;
+.cv {
+	opacity: 1;
+	transition: opacity 2s ease-in-out;
+}
+.cv.hide {
+	opacity: 0;
+}
+.skills {
+	visibility: hidden;
 }
 .skillToggle {
 	position: absolute;
