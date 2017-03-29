@@ -417,6 +417,7 @@ a:hover::after, a.page::after {
 
 /* Sect. About */
 .about {
+	height: calc(300% - 177px);
 	background-image: url("../images/aboutLrg.jpg");
 	background-attachment: fixed;
 	background-position: top left;
@@ -463,7 +464,7 @@ a:hover::after, a.page::after {
 .blurb {
 	display: block;
 	width: 100%;
-	height: calc(100% - 59px);
+	height: 100%;
 	overflow: hidden;
 	position: relative;
 	top: 59px;
@@ -479,7 +480,7 @@ a:hover::after, a.page::after {
 	overflow-y: scroll;
 }
 .aboutSect {
-	height: 100%;
+	height: calc(33% - 20px);
 }
 .aboutCont {
 	position: relative;
@@ -488,16 +489,16 @@ a:hover::after, a.page::after {
 	width: 66%;
 	transform: translate(-50%, -50%);
 }
-.none {
+/*.none {
 	display: none;
-}
-.skillToggle {
+}*/
+/*.skillToggle {
 	top: 0px;
 	right: 0px;
-}
-.skillToggle li {
+}*/
+/*.skillToggle li {
 	text-align: right;
-}
+}*/
 .skillToggle li:hover {
 	color: #262626;
 	cursor: pointer;
@@ -514,6 +515,15 @@ a:hover::after, a.page::after {
 }
 .right li {
 	text-align: right;
+}
+.left li {
+	text-align: left;
+}
+
+
+/* Work Sect. */
+.work {
+	height: 100%;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
@@ -680,5 +690,13 @@ a:hover::after, a.page::after {
 		60% {opacity: 1;}
 		92% {font-size: 104px;}
 		100% {font-size: 51.5px;}
+	}
+	.blurb {
+		font-size: 16px;
+	}
+}
+@media only screen and (min-width: 1020px) {
+	.about h1 {
+		font-size: 240px;
 	}
 }

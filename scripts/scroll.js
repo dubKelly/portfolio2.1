@@ -4,6 +4,8 @@
 	// var lax = document.getElementsByClassName("lax");
 	var latestScroll = 0;
 	var ticking = false;
+	var mainNav = document.getElementsByClassName("mainNav");
+	var sect = document.getElementsByTagName("section");
 	window.onscroll = function() {
 		latestScroll = window.pageYOffset;
 		requestTick();
@@ -33,24 +35,13 @@
 			fade[0].style.opacity = 1 - (currentScroll / (window.innerHeight / 3));
 		}
 		/*** pagination ***/
-		var mainNav = document.getElementsByClassName("mainNav");
-		var pageTop = [0, 1, 2, 3];
+		var pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
 		for (var i = mainNav.length - 1; i >= 0; i--) {
-			if (currentScroll >= (window.innerHeight * pageTop[i]) && currentScroll < (window.innerHeight * pageTop[i + 1])) {
+			if (currentScroll >= pageTop[i] && currentScroll < pageTop[i + 1]) {
 				mainNav[i].classList.add("page");
 			}
 			else {
 				mainNav[i].classList.remove("page");
-			}
-		}
-		/*** cvScroll ***/
-		var none = document.getElementsByClassName("none");
-		for (var i = none.length - 1; i >= 0; i--) {
-			if (currentScroll === window.innerHeight) {
-				none[i].style.display = "block";
-			}
-			else {
-				none[i].style.display = "none";
 			}
 		}
 		// /*** parallaxBackground ***/
