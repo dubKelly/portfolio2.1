@@ -34,25 +34,17 @@
 		}
 		/*** pagination ***/
 		var mainNav = document.getElementsByClassName("mainNav");
-		var pageTop = [0, 1, 2, 3];
+		var sect = document.getElementsByTagName("section");
+		var pageTop = [0, sect[0].clientHeight, sect[1].clientHeight, sect[2].clientHeight];
 		for (var i = mainNav.length - 1; i >= 0; i--) {
-			if (currentScroll >= (window.innerHeight * pageTop[i]) && currentScroll < (window.innerHeight * pageTop[i + 1])) {
+			if (currentScroll >= pageTop[i] && currentScroll < pageTop[i + 1]) {
 				mainNav[i].classList.add("page");
 			}
 			else {
 				mainNav[i].classList.remove("page");
 			}
 		}
-		/*** cvScroll ***/
-		var none = document.getElementsByClassName("none");
-		for (var i = none.length - 1; i >= 0; i--) {
-			if (currentScroll === window.innerHeight) {
-				none[i].style.display = "block";
-			}
-			else {
-				none[i].style.display = "none";
-			}
-		}
+		console.log(document.getElementById("landing").clientHeight)
 		// /*** parallaxBackground ***/
 		// if (currentScroll <= window.innerHeight) {
 		// 	lax[0].style.backgroundPosition = "0% " + (((currentScroll / window.innerHeight) * 50) + 50) + "%";
