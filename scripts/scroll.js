@@ -44,12 +44,14 @@
 			}
 		}
 		/*** cvScroll ***/
-		var skills = document.getElementsByClassName("skills");
-		if (currentScroll === window.innerHeight) {
-			skills[0].style.display = "block";
-		}
-		else {
-			skills[0].style.display = "none";
+		var none = document.getElementsByClassName("none");
+		for (var i = none.length - 1; i >= 0; i--) {
+			if (currentScroll === window.innerHeight) {
+				none[i].style.display = "block";
+			}
+			else {
+				none[i].style.display = "none";
+			}
 		}
 		// /*** parallaxBackground ***/
 		// if (currentScroll <= window.innerHeight) {
