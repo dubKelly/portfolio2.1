@@ -523,7 +523,7 @@ a:hover::after, a.page::after {
 
 /* Work Sect. */
 .work {
-	height: 280px;
+	height: 100%;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {

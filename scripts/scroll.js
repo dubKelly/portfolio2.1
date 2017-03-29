@@ -35,7 +35,7 @@
 		/*** pagination ***/
 		var mainNav = document.getElementsByClassName("mainNav");
 		var sect = document.getElementsByTagName("section");
-		var pageTop = [0, sect[0].clientHeight, sect[1].clientHeight, sect[2].clientHeight];
+		var pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
 		for (var i = mainNav.length - 1; i >= 0; i--) {
 			if (currentScroll >= pageTop[i] && currentScroll < pageTop[i + 1]) {
 				mainNav[i].classList.add("page");
@@ -44,7 +44,6 @@
 				mainNav[i].classList.remove("page");
 			}
 		}
-		console.log(document.getElementById("landing").clientHeight)
 		// /*** parallaxBackground ***/
 		// if (currentScroll <= window.innerHeight) {
 		// 	lax[0].style.backgroundPosition = "0% " + (((currentScroll / window.innerHeight) * 50) + 50) + "%";
