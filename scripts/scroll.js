@@ -4,6 +4,8 @@
 	// var lax = document.getElementsByClassName("lax");
 	var latestScroll = 0;
 	var ticking = false;
+	var mainNav = document.getElementsByClassName("mainNav");
+	var sect = document.getElementsByTagName("section");
 	window.onscroll = function() {
 		latestScroll = window.pageYOffset;
 		requestTick();
@@ -33,8 +35,6 @@
 			fade[0].style.opacity = 1 - (currentScroll / (window.innerHeight / 3));
 		}
 		/*** pagination ***/
-		var mainNav = document.getElementsByClassName("mainNav");
-		var sect = document.getElementsByTagName("section");
 		var pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
 		for (var i = mainNav.length - 1; i >= 0; i--) {
 			if (currentScroll >= pageTop[i] && currentScroll < pageTop[i + 1]) {
