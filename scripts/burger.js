@@ -11,7 +11,7 @@
 			}
 		if (toggle === 0) {
 			toggle++;
-			nav[0].style.zIndex = "2";
+			nav[0].style.zIndex = "3";
 		}
 		else {
 			toggle--;
