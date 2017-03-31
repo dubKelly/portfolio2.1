@@ -17,6 +17,8 @@
 			$(this).attr("data-scrollPoint", sP);
 		})
 		windowHeight = window.innerHeight;
+		sect[2].style.height = (window.innerWidth * 1.2) + "px";
+		console.log(sect[2]);
 		pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
 	}
 	xY();
