@@ -480,14 +480,6 @@ a svg:hover .linkedIn {
 	left: 0;
 	font-size: 12px;
 }
-.blurbCont {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	top: 0;
-	left: 0;
-	overflow-y: scroll;
-}
 .aboutSect {
 	height: 33.33%;
 }

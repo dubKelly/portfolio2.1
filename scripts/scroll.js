@@ -1,11 +1,4 @@
 (function scroll() {
-	// $(".aboutScroll").each(function() {
-	// 	var offset = $(this).offset();
-	// 	var height = $(this).outerHeight();
-	// 	var sP = ((offset.top + height) / $(window).innerHeight()) - 1;
-	// 	$(this).attr("data-scrollPoint", sP);
-	// })
-	var $ = require("jquery");
 	/*** DOM ***/
 	var scroll = document.getElementsByClassName("scroll");
 	var fade = document.getElementsByClassName("fade");
