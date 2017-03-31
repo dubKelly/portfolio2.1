@@ -452,22 +452,6 @@ a svg:hover .linkedIn {
 	text-align: center;
 	transition: opacity .8s ease-in-out;
 }
-.next {
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.arrow:hover {
-	cursor: pointer;
-}
-.polygon {
-	transition: all .2s ease-in-out;
-}
-.arrow:hover .polygon {
-	fill: #262626;
-}
-
 
 /*** Blurb ***/
 .blurb {
@@ -521,9 +505,80 @@ a svg:hover .linkedIn {
 
 /* Work Sect. */
 .work {
-	height: 66%;
-	min-height: 500px;
+/*	height: 66%;
+	min-height: 640px;*/
 	background-color: #262626;
+}
+.site {
+	position: relative;
+	float: left;
+}
+.sOne {
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/6IFQRKBY19.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 33%;
+	width: 60%;
+}
+.sTwo {
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/O5ZSIZZ9HA.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 20%;
+	width: 40%;
+}
+.sThree {
+	background-color: #a83519;
+/*	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;*/
+	height: 13%;
+	width: 40%;
+}
+.sFour {
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/B47KPDQPRG.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	height: 33%;
+	width: 100%;
+}
+.sFive {
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/J18ZCO3IPA.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 34%;
+	width: 50%;
+}
+.sSix {
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/L3L1V89NLF.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	height: 34%;
+	width: 50%;	
+}
+.siteWrap {
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	opacity: 0;
+	transition: all .3s ease-in-out; 
+}
+.siteWrap p {
+	font-family: "Poiret One", cursive;
+	font-size: 24px;
+	color: white;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.siteWrap:hover {
+	opacity: 0.8;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
@@ -640,6 +695,9 @@ a svg:hover .linkedIn {
 	}
 	.about p, .about ul {
 		transition: opacity .8s ease-out;
+	}
+	.siteWrap p {
+		font-size: 40px;
 	}
 	@keyframes homeLoad {
 		0% {
