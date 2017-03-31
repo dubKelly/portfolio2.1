@@ -1,18 +1,33 @@
 (function scroll() {
+	// $(".aboutScroll").each(function() {
+	// 	var offset = $(this).offset();
+	// 	var height = $(this).outerHeight();
+	// 	var sP = ((offset.top + height) / $(window).innerHeight()) - 1;
+	// 	$(this).attr("data-scrollPoint", sP);
+	// })
+	var $ = require("jquery");
 	/*** DOM ***/
 	var scroll = document.getElementsByClassName("scroll");
 	var fade = document.getElementsByClassName("fade");
 	var mainNav = document.getElementsByClassName("mainNav");
 	var sect = document.getElementsByTagName("section");
-	var windowHeight = window.innerHeight;
-	var pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
+	var windowHeight;
+	var pageTop = [];
 	var latestScroll = 0;
 	var ticking = false;
 	// var lax = document.getElementsByClassName("lax");
-	window.onresize = function xY() {
+	function xY() {
+		$(".aboutScroll").each(function scrollP() {
+			var offset = $(this).offset();
+			var height = $(this).outerHeight();
+			var sP = ((offset.top + height) / $(window).innerHeight()) - 1;
+			$(this).attr("data-scrollPoint", sP);
+		})
 		windowHeight = window.innerHeight;
 		pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
 	}
+	xY();
+	window.onresize = xY;
 	window.onscroll = function() {
 		latestScroll = window.pageYOffset;
 		requestTick();
@@ -38,9 +53,9 @@
 		}
 		/*** addFade ***/
 		// .5 cushion for missed scroll events
-		if ((currentScroll / (windowHeight / 3)) <= 1.5) {
-			for (var i = fade.length - 1; i >= 0; i--) {
-				fade[i].style.opacity = 1 - (currentScroll / (windowHeight / 3));
+		for (var i = fade.length - 1; i >= 0; i--) {
+			if ((currentScroll / (windowHeight / 2)) <= 1.5) {
+				fade[i].style.opacity = 1 - (currentScroll / (windowHeight / 2));
 			}
 		}
 		/*** pagination ***/
