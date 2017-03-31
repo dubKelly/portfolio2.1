@@ -426,7 +426,7 @@ a svg:hover .linkedIn {
 
 /* Sect. About */
 .about {
-	height: calc(300% - 177px);
+	height: calc(300% - 118px);
 	background-image: url("../images/aboutLrg.jpg");
 	background-attachment: fixed;
 	background-position: top left;
@@ -518,10 +518,10 @@ a svg:hover .linkedIn {
 .left li {
 	text-align: left;
 }
-/*.about p, .about ul {
+.about p, .about ul {
 	opacity: 0;
 	transition: opacity .3s ease-out;
-}*/
+}
 .about p.scrolled, .about ul.scrolled {
 	opacity: 1;
 }
