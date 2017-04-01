@@ -108,6 +108,7 @@ span {
 	left: 30px;
 	z-index: 2;
 	transition: all .3s ease-in-out;
+	transition: color .2s ease-in-out;
 	animation: homeLoad 3s linear;
 }
 .home.scrolled {
@@ -118,7 +119,6 @@ span {
 	display: none;
 }
 .landing h1 {
-	color: #a83519;
 	text-transform: uppercase;
 	line-height: 0.9;
 	margin: 0;
@@ -162,6 +162,9 @@ span {
 	width: 100%;
 	height: 1px;
 	opacity: 0.3; 
+}
+.line.bottom {
+	background-color: #262626;
 }
 .jTitle {
 	font-family: "Poiret One", cursive;
@@ -269,10 +272,14 @@ span {
 	right: 0;
 	width: 100%;
 	z-index: 1;
-	transition: background-color .2s ease-in-out;
+	margin: 0 0 100% 0;
+	transition: all .2s ease-in-out;
 }
 .header.scrolled {
 	background-color: rgba(38, 38, 38, 0.9);
+}
+.header.bottom {
+	background-color: rgba(38, 38, 38, 0);
 }
 .nav {
 	text-align: right;
@@ -313,6 +320,12 @@ a:hover::after, a.page::after {
 }
 .clicked::after {
 	width: 0.0001px;
+}
+a.bottom {
+	color: #262626;
+}
+a.bottom::after {
+	background-color: #262626;
 }
 @keyframes navLoad {
 	0% {opacity: 0;}
@@ -372,6 +385,9 @@ a svg:hover .linkedIn {
 	left: 0;
 	transition: all .2s ease-in-out;
 }
+.goodBurger.bottom span {
+	background-color: #262626;
+}
 .goodBurger span:nth-child(1) {
 	top: 0px;
 }
@@ -385,12 +401,15 @@ a svg:hover .linkedIn {
 	top: 12px;
 	width: 0px;
 	left: 50%;
+	background-color: #a83519;
 }
 .goodBurger.open span:nth-child(2) {
 	transform: rotate(-45deg);
+	background-color: #a83519;
 }
 .goodBurger.open span:nth-child(3) {
 	transform: rotate(45deg);
+	background-color: #a83519;
 }
 .goodBurger.scrolled {
 	top: 18px;
@@ -505,8 +524,6 @@ a svg:hover .linkedIn {
 
 /* Work Sect. */
 .work {
-/*	height: 66%;
-	min-height: 640px;*/
 	background-color: #262626;
 }
 .site {
@@ -579,6 +596,35 @@ a svg:hover .linkedIn {
 }
 .siteWrap:hover {
 	opacity: 0.8;
+}
+
+
+/* Contact Sect. */
+.contact {
+	height: 100%;
+	background-image: url("https://c1.staticflickr.com/8/7529/27612187345_feed242fdd_b.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+.contactWrap {
+	position: relative;
+	width: 80%;
+	height: calc(100% - 118px);
+	top: 59px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(38, 38, 38, 0.9);
+}
+.contact h1 {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	font-size: 90px;
+	font-family: "Poiret One", cursive;
+	color: black;
+	opacity: 0.05;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
@@ -698,6 +744,10 @@ a svg:hover .linkedIn {
 	}
 	.siteWrap p {
 		font-size: 40px;
+	}
+	.contactWrap {
+		height: calc(100% - 158px);
+		top: 79px;
 	}
 	@keyframes homeLoad {
 		0% {
