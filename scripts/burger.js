@@ -1,6 +1,7 @@
 (function burger() {
 	var gBurg = document.getElementsByClassName("goodBurger");
 	var nav = document.getElementsByClassName("mobileNav");
+	var icons = document.getElementsByClassName("mainIcons");
 	var blur = document.getElementsByClassName("blur");
 	var toggle = 0;
 	var navOpen = function() {

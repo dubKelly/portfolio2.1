@@ -334,7 +334,7 @@ a.bottom::after {
 
 
 /*** Icons ***/
-.mainIcons {
+.mainIcons, .mobileIcons {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
@@ -444,7 +444,6 @@ a svg:hover .linkedIn {
 
 /* Sect. About */
 .about {
-	/*height: calc(300% - 118px);*/
 	height: 100%;
 	background-image: url("../images/aboutLrg.jpg");
 	background-attachment: fixed;
@@ -485,6 +484,10 @@ a svg:hover .linkedIn {
 	text-align: center;
 	transition: opacity .8s ease-in-out;
 }
+.pLink {
+	text-transform: lowercase;
+	font-size: 100%;
+}
 
 /*** Blurb ***/
 .blurb {
@@ -507,14 +510,13 @@ a svg:hover .linkedIn {
 }*/
 .aboutCont {
 	position: absolute;
-	top: 50%;
+	top: calc(50% - 16px);
 	left: 50%;
 	width: 66%;
 	z-index: 1;
 	transition: all .3s ease-in-out;
 	transform: translate(-50%, -50%);
 }
-//
 .skillToggle li:hover {
 	color: #262626;
 	cursor: pointer;
@@ -548,7 +550,7 @@ a svg:hover .linkedIn {
 }
 .next {
 	position: absolute;
-	top: 90%;
+	top: 80%;
 	left: 50%;
 	z-index: 2;
 	transform: translate(-50%, -50%);
@@ -658,15 +660,26 @@ a svg:hover .linkedIn {
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: rgba(38, 38, 38, 0.9);
+	background-image: url("../images/hoods4242420.5c1.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .contact h1 {
 	position: absolute;
-	top: 30px;
-	left: 10px;
-	font-size: 90px;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
 	font-family: "Poiret One", cursive;
-	color: black;
-	opacity: 0.05;
+	color: white;
+	/*opacity: 0.9;*/
+	/*text-transform: uppercase;*/
+	font-weight: 800;
+}
+.hoods {
+	width: 100%;
+	opacity: 0.5;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
@@ -677,7 +690,11 @@ a svg:hover .linkedIn {
 		left: 33%;
 		width: 50%;
 	}
+	.skills, .tech {
+		top: 50%;
+	}
 	.next {
+		top: 90%;
 		left: 33%;
 	}
 }
@@ -793,6 +810,9 @@ a svg:hover .linkedIn {
 	.contactWrap {
 		height: calc(100% - 158px);
 		top: 79px;
+	}
+	.skills, .tech {
+		top: calc(50% - 32px);
 	}
 	.next {
 		top: 80%;
