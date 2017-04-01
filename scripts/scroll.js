@@ -2,6 +2,7 @@
 	/*** DOM ***/
 	var scroll = document.getElementsByClassName("scroll");
 	var fade = document.getElementsByClassName("fade");
+	var rock = document.getElementsByClassName("rock");
 	var mainNav = document.getElementsByClassName("mainNav");
 	var sect = document.getElementsByTagName("section");
 	var windowHeight;
@@ -18,8 +19,13 @@
 		})
 		windowHeight = window.innerHeight;
 		sect[2].style.height = (window.innerWidth * 1.2) + "px";
-		console.log(sect[2]);
-		pageTop = [0, sect[0].clientHeight, (sect[1].clientHeight + sect[0].clientHeight), (sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)];
+		pageTop = [
+			0,
+			sect[0].clientHeight,
+			(sect[1].clientHeight + sect[0].clientHeight),
+			(sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight),
+			(sect[3].clientHeight + sect[2].clientHeight + sect[1].clientHeight + sect[0].clientHeight)
+		];
 	}
 	xY();
 	window.onresize = xY;
@@ -60,6 +66,15 @@
 			}
 			else {
 				mainNav[i].classList.remove("page");
+			}
+		}
+		/*** rockBottom ***/
+		for (var i = rock.length - 1; i >= 0; i--) {
+			if (currentScroll >= pageTop[3]) {
+				rock[i].classList.add("bottom");
+			}
+			else {
+				rock[i].classList.remove("bottom");
 			}
 		}
 		// /*** parallaxBackground ***/
