@@ -452,7 +452,8 @@ a svg:hover .linkedIn {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.about h1 {
+.aboutHead {
+	position: absolute;
 	display: block;
 	font-family: "Poiret One", cursive;
 	font-size: 60px;
@@ -464,7 +465,20 @@ a svg:hover .linkedIn {
 	left: -40px;
 	-webkit-transform: rotate(-90deg);
 	transform: rotate(90deg);
+	transition: all .2s ease-in-out;
 	z-index: 0;
+}
+.aboutHead.skills {
+	top: 140px;
+	left: -20px;
+}
+.aboutHead.tech {
+	top: 135px;
+	left: -15px;
+}
+.aboutHead.none {
+	opacity: 0;
+	z-index: -1;
 }
 .about p {
 	padding: 6px 0;
@@ -496,6 +510,8 @@ a svg:hover .linkedIn {
 	top: 50%;
 	left: 50%;
 	width: 66%;
+	z-index: 1;
+	transition: all .3s ease-in-out;
 	transform: translate(-50%, -50%);
 }
 //
@@ -505,12 +521,6 @@ a svg:hover .linkedIn {
 }
 .about ul {
 	padding: 6px 0;
-}
-.skills, .tech {
-	z-index: -1;
-}
-.intro {
-	z-index: 1;
 }
 .skills li, .tech li {
 	color: #424242;
@@ -532,11 +542,9 @@ a svg:hover .linkedIn {
 .about p.scrolled, .about ul.scrolled {
 	opacity: 1;
 }
-.aboutCont {
-	transition: all .3s ease-in-out;
-}
 .aboutCont.none {
 	opacity: 0;
+	z-index: -1;
 }
 .next {
 	position: absolute;
@@ -727,7 +735,7 @@ a svg:hover .linkedIn {
 	.container.scrolled {
 		margin: 20px 15px;
 	}
-	.about h1 {
+	.aboutHead, .aboutHead.skills, .aboutHead.tech {
 		font-size: 140px;
 		opacity: 0.2;
 		top: 100%;
@@ -785,6 +793,9 @@ a svg:hover .linkedIn {
 	.contactWrap {
 		height: calc(100% - 158px);
 		top: 79px;
+	}
+	.next {
+		top: 80%;
 	}
 	@keyframes homeLoad {
 		0% {
@@ -844,7 +855,7 @@ a svg:hover .linkedIn {
 	}
 }
 @media only screen and (min-width: 1020px) {
-	.about h1 {
+	.aboutHead, .aboutHead.skills, .aboutHead.tech {
 		font-size: 240px;
 	}
 }
