@@ -68,6 +68,7 @@
 				mainNav[i].classList.remove("page");
 			}
 		}
+		/*** rockBottom ***/
 		for (var i = rock.length - 1; i >= 0; i--) {
 			if (currentScroll >= pageTop[3]) {
 				rock[i].classList.add("bottom");
