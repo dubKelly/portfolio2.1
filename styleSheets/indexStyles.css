@@ -40,12 +40,11 @@ span {
 
 /* Sect. Landing */
 .landing {
+	position: relative;
 	background-image: url("../images/landingLrg.jpg");
 	background-size: cover;
 	background-position: 0% 50%;
-	background-attachment: fixed;
 	background-repeat: no-repeat;
-	position: relative;
 	z-index: 1;
 	transition: all .2s ease-in-out;
 }
@@ -453,7 +452,6 @@ a svg:hover .linkedIn {
 .about {
 	height: 100%;
 	background-image: url("../images/aboutLrg.jpg");
-	background-attachment: fixed;
 	background-position: top left;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -466,7 +464,6 @@ a svg:hover .linkedIn {
 	color: #a83519;
 	opacity: 0.3;
 	text-transform: uppercase;
-	position: fixed;
 	top: 150px;
 	left: -40px;
 	-webkit-transform: rotate(-90deg);
@@ -591,9 +588,6 @@ a svg:hover .linkedIn {
 }
 .sThree {
 	background-color: #a83519;
-/*	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;*/
 	height: 13%;
 	width: 40%;
 }
@@ -649,7 +643,6 @@ a svg:hover .linkedIn {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed;
 }
 .contactWrap {
 	position: relative;
@@ -937,5 +930,13 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 @media only screen and (min-width: 1020px) {
 	.aboutHead, .aboutHead.skills, .aboutHead.tech {
 		font-size: 240px;
+	}
+}
+@media only screen and (min-width: 1370px) {
+	.landing, .about, .contact {
+		background-attachment: fixed;
+	}
+	.aboutHead {
+		position: fixed;
 	}
 }
