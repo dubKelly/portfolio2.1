@@ -932,7 +932,7 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 		font-size: 240px;
 	}
 }
-@media only screen and (min-width: 1370px) {
+@media only screen and (min-width: 1450px) {
 	.landing, .about, .contact {
 		background-attachment: fixed;
 	}
