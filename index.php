@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 session_start();
 function generateFormToken($form) {
 	$token = md5(uniqid(microtime(), true));
@@ -18,52 +17,46 @@ function verifyFormToken($form) {
 	}
 	return true;
 }
-if (verifyFormToken('form1')) {
-	if (isset($_POST['message'])) {
-		$whitelist = array('token', 'name', 'email', 'message');
-		foreach ($_POST as $key => $value) {
-			if (!in_array($key, $whitelist)) {
-				die();
-			}
-		}
-		$message = '<html><body>';
-		$message .= '<table rules="all" style="border-color: #262626;" cellpadding="10">';
-		$message .= "<tr style='background: #c4351f;'><td>Name: </td><td>".strip_tags($_POST['name'])."</td></tr>";
-		$email = $_POST['email'];
-		if (($email) != '') {
-			$message .= "<tr><td>Email: </td><td>".strip_tags($_POST['email'])."</td></tr>";
-		}
-		$message .= "<tr><td></td><td>".htmlentities($_POST['message'])."</td></tr>";
-		$message .= "</table>";
-		$message .= "</body></html>";
-		$pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i";
-		if (preg_match($pattern, trim(strip_tags($_POST['email'])))) {
-			$cleanedFrom = trim(strip_tags($_POST['email']));
-		}
-		else {
-			return "Invalid Email";
-		}
-		$to = 'holla@jordanneeb.com';
-		$subject = "YaDontKnowNoOneWhoDontWantNothinDoneDoYa?";
-		$headers = "From:".$cleanedFrom."\r\n";
-		$headers .= "Reply-To:".strip_tags($_POST['email'])."\r\n";
-		$headers .= "MIME-Version: 1.0\r\n";
-		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-		if (mail($to, $subject, $message, $headers)) {
-			header('Location: #landing');
-		}
-		else {
-			echo "Message failed to send.";
-		}
-		die();
+function check_input($data, $problem='')
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	if ($problem && strlen($data) == 0)
+	{
+		show_error($problem);
 	}
+	return $data;
 }
-else {
-	if (!isset($_SESSION[$form.'_token'])) {
+function show_error($myError)
+{
+?>
+	<html>
+	<body>
+	<b>Please correct the following test error:</b><br />
+	<?php echo $myError; ?>
+	</body>
+	</html>
+<?php
+exit();
+}
+if (verifyFormToken('form1')) {
+	$myemail = 'holla@jordanneeb.com';
+	$name = check_input($_POST['name'], "Enter your name.");
+	$email = check_input($_POST['email']);
+	$comments = check_input($_POST['message'], "Please include a message.");
+	$subject = "Freelance Work";
+	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
+	{
+	    show_error("E-mail address not valid");
 	}
-	else {
-		echo "Common, man. I never hurt nobody.";
-	}
+	$message = "Name: $name
+	Email: $email
+	Message: $comments";
+	mail($myemail, $subject, $message);
+	header('Location: index.php');
+	exit();
+} else {
 }
 ?>
 <!DOCTYPE html>
@@ -283,7 +276,7 @@ $newToken = generateFormToken('form1');
 <section id="contact" class="contact blur hide">
 	<div class="contactWrap">
 		<h1><span>What's</span> <span>Up?</span></h1>
-		<form action="index.php" method="post">
+		<form action="index.php" id="form" method="post">
 			<input type="hidden" name="token" value="<?php echo $newToken; ?>">
 			<input class="input" type="text" name="name" placeholder="Name">
 			<input class="input" type="text" name="email" placeholder="Email">
@@ -303,11 +296,6 @@ $newToken = generateFormToken('form1');
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="scripts/scroll.js"></script>
-<script type="text/javascript" src="scripts/burger.js"></script>
-<script type="text/javascript" src="scripts/sticky.js"></script>
-<script type="text/javascript" src="scripts/skillToggle.js"></script>
-<script type="text/javascript" src="scripts/aboutToggle.js"></script>
-<script type="text/javascript" src="scripts/formVerify.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
 </body>
 </html>
