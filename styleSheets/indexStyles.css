@@ -334,7 +334,7 @@ a.bottom::after {
 
 
 /*** Icons ***/
-.mainIcons, .mobileIcons {
+.mainIcons, .mobileIcons, .footIcons {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
@@ -345,8 +345,15 @@ a.bottom::after {
 	display: block;
 	margin: 10px 10px;
 }
+.footIcon {
+	display: inline-block;
+	margin: 5px 5px;
+}
 .lI {
 	padding: 0 0 0 3px;
+}
+.footIcons .lI {
+	padding: 0 0 3px 0;
 }
 a svg:hover .gitHub {
 	fill: #800080;
@@ -500,14 +507,6 @@ a svg:hover .linkedIn {
 	left: 0;
 	font-size: 12px;
 }
-/*.aboutSect {
-	//
-	position: absolute;
-	top: 0;
-	left: 0;
-	/*height: 33.33%;*/
-	/*height: 100%;
-}*/
 .aboutCont {
 	position: absolute;
 	top: calc(50% - 16px);
@@ -646,7 +645,7 @@ a svg:hover .linkedIn {
 /* Contact Sect. */
 .contact {
 	height: 100%;
-	background-image: url("https://c1.staticflickr.com/8/7529/27612187345_feed242fdd_b.jpg");
+	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/HSLCK62NHN.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -667,19 +666,48 @@ a svg:hover .linkedIn {
 }
 .contact h1 {
 	position: absolute;
-	top: 25%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 20px;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-145px);
+	font-size: 24px;
 	font-family: "Poiret One", cursive;
-	color: white;
-	/*opacity: 0.9;*/
-	/*text-transform: uppercase;*/
+	color: #a9a9a9;
 	font-weight: 800;
 }
-.hoods {
+.contact h1 span {
+	display: inline-block;
+}
+form {
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+input, textarea {
 	width: 100%;
-	opacity: 0.5;
+	margin: 3px 0;
+	padding: 3px 6px;
+	background-color: rgba(38, 38, 38, 0.7);
+	border: 2px solid #424242;
+	box-sizing: border-box;
+	color: #a9a9a9;
+}
+textarea {
+	resize: none;
+}
+textarea::-webkit-scrollbar {
+	width: 0px;
+}
+input:focus, textarea:focus, input:hover, textarea:hover {
+	border: 2px solid #a9a9a9;
+	outline: none;
+}
+.submit {
+	position: relative;
+	width: 50%;
+	float: right;
+	color: #424242;
 }
 @media only screen and (orientation: landscape) {
 	.blurb {
@@ -696,6 +724,22 @@ a svg:hover .linkedIn {
 	.next {
 		top: 90%;
 		left: 33%;
+	}
+	.contactWrap {
+		height: calc(100% - 89px);
+	}
+	.contact h1 {
+		font-size: 64px;
+		opacity: 0.2;
+		left: 20px;
+		transform: translateY(-98px);
+	}
+	.contact h1 span {
+		display: block;
+	}
+	form {
+		width: 55%;
+		transform: translate(-25%, -50%);
 	}
 }
 @media only screen and (max-width: 350px) and (max-height: 550px) {
@@ -816,6 +860,22 @@ a svg:hover .linkedIn {
 	}
 	.next {
 		top: 80%;
+	}
+	.contact h1 {
+		font-size: 82px;
+		opacity: 0.2;
+		left: 20px;
+		transform: translateY(-160px);
+	}
+	.contact h1 span {
+		display: block;
+	}
+	form {
+		width: 55%;
+		transform: translate(-25%, -50%);
+	}
+	textarea {
+		height: 200px;
 	}
 	@keyframes homeLoad {
 		0% {
