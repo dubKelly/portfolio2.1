@@ -17,8 +17,7 @@ function verifyFormToken($form) {
 	}
 	return true;
 }
-function check_input($data, $problem='')
-{
+function check_input($data, $problem='') {
 	$data = trim($data);
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
@@ -28,8 +27,7 @@ function check_input($data, $problem='')
 	}
 	return $data;
 }
-function show_error($myError)
-{
+function show_error($myError) {
 ?>
 	<html>
 	<body>
@@ -56,7 +54,8 @@ if (verifyFormToken('form1')) {
 	mail($myemail, $subject, $message);
 	header('Location: index.php');
 	exit();
-} else {
+} 
+else {
 }
 ?>
 <!DOCTYPE html>
