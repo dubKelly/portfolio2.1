@@ -45,7 +45,7 @@ if (verifyFormToken('form1')) {
 	$name = check_input($_POST['name'], "Enter your name.");
 	$email = check_input($_POST['email']);
 	$comments = check_input($_POST['message'], "Please include a message.");
-	$subject = "Freelance Work";
+	$subject = "Site Contact";
 	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 	{
 	    show_error("E-mail address not valid");

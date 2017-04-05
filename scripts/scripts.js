@@ -1,3 +1,4 @@
+//
 (function aboutToggle() {
 	var sect = document.getElementsByClassName("aboutCont");
 	var head = document.getElementsByClassName("aboutHead");
