@@ -313,10 +313,10 @@ a::after {
 	transform: translateX(-50%);
 	transition: all .15s ease-in-out;
 }
-a:hover::after, a.page::after {
+a:hover::after, a.page::after, a.page.clicked::after {
 	width: 100%;
 }
-.clicked::after {
+a.clicked::after {
 	width: 0.0001px;
 }
 a.bottom {
