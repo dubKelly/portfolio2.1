@@ -229,11 +229,10 @@ $newToken = generateFormToken('form1');
 				</div>
 				<div class="right">
 					<ul class="scroll aboutScroll" data-scrollPoint="">
-						<li>HTML5/Liquid</li>
-						<li>CSS3/Scss</li>
-						<li>JavaScript/jQuery/React/Es6</li>
-						<li>PHP/Ajax/Json</li>
-						<li>Bootstrap</li>
+						<li>HTML5</li>
+						<li>CSS3</li>
+						<li>JavaScript/jQuery</li>
+						<li>PHP</li>
 					</ul>
 				</div>
 				<div class="left">
