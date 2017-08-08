@@ -39,7 +39,7 @@ function show_error($myError) {
 exit();
 }
 if (verifyFormToken('form1')) {
-	$myemail = 'holla@jordanneeb.com';
+	$myemail = 'info@jordanneeb.com';
 	$name = check_input($_POST['name'], "Enter your name.");
 	$email = check_input($_POST['email']);
 	$comments = check_input($_POST['message'], "Please include a message.");
