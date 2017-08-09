@@ -639,7 +639,8 @@ a svg:hover .linkedIn {
 /* Contact Sect. */
 .contact {
 	height: 100%;
-	background-image: url("images/kensingtonParking.jpg");
+	min-height: 446px;
+	background-image: url("../images/kensingtonParking.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -706,6 +707,9 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 	.blurb {
 		width: 100%;
 		left: 0;
+	}
+	.contact {
+		min-height: 320px;
 	}
 	.aboutCont {
 		left: 33%;
