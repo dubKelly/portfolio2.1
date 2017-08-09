@@ -323,6 +323,7 @@ a.bottom {
 	color: #262626;
 }
 a.bottom::after {
+	position: absolute;
 	background-color: #262626;
 }
 @keyframes navLoad {
@@ -566,73 +567,14 @@ a svg:hover .linkedIn {
 .work {
 	background-color: #262626;
 }
-.site {
-	position: relative;
-	float: left;
-}
-.sOne {
-	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/6IFQRKBY19.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 33%;
-	width: 60%;
-}
-.sTwo {
-	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/O5ZSIZZ9HA.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 20%;
-	width: 40%;
-}
-.sThree {
-	background-color: #a83519;
-	height: 13%;
-	width: 40%;
-}
-.sFour {
-	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/B47KPDQPRG.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;	
-	height: 33%;
-	width: 100%;
-}
-.sFive {
-	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/J18ZCO3IPA.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 34%;
-	width: 50%;
-}
-.sSix {
-	background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/L3L1V89NLF.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;	
-	height: 34%;
-	width: 50%;	
-}
-.siteWrap {
-	height: 100%;
-	width: 100%;
-	background-color: #262626;
-	opacity: 0;
-	transition: all .3s ease-in-out; 
-}
-.siteWrap p {
-	font-family: "Poiret One", cursive;
-	font-size: 24px;
-	color: white;
-	position: relative;
+.titleCont {
+	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
-	text-align: center;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-.siteWrap:hover {
-	opacity: 0.8;
+.title {
+	font-size: 24px;
 }
 
 
