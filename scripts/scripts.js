@@ -11,11 +11,32 @@
 			iframeCont[i].appendChild(iframe);
 		}
 	}, 4000);
+})();
+
+(function toggleIframe() {
+
 	var view = document.getElementsByClassName("view");
-	for (var i = view.length - 1; i >= 0; i--) {
+	var viewHide = document.getElementsByClassName("viewHide");
+	var index;
+
+	for (var i = view.length - 1; i>= 0; i--) {
 		view[i].onclick = function() {
-			this.parentNode.parentNode.childNodes[3].scrolling = "auto";
-			this.parentNode.style.display = "none";
+			index = this.getAttribute("data-index");
+			if (window.innerWidth >= 640) {
+				this.parentNode.style.display = "none";
+				viewHide[index].style.display = "inline-block";
+			}
+			else {
+				var iframeCont = document.getElementsByClassName("iframeCont");
+				window.location.href = iframeCont[index].getAttribute("data-src");
+			}
+		}
+	}
+	for (var i = viewHide.length - 1; i >= 0; i--) {
+		viewHide[i].onclick = function() {
+			index = this.getAttribute("data-index");
+			this.style.display = "none";
+			view[index].parentNode.style.display = "inline-block";
 		}
 	}
 })();
