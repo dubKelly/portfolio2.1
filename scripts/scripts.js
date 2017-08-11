@@ -1,3 +1,25 @@
+(function iframeLoad() {
+	var iframeCont = document.getElementsByClassName("iframeCont");
+	var iframes = [];
+	setTimeout(function() {
+		for (var i = iframeCont.length - 1; i >= 0; i--) {
+			var src = iframeCont[i].getAttribute("data-src");
+			var iframe = document.createElement("iframe");
+			iframe.src = src;
+			iframe.scrolling = "yes";
+			iframes.push(iframe);
+			iframeCont[i].appendChild(iframe);
+		}
+	}, 4000);
+	var view = document.getElementsByClassName("view");
+	for (var i = view.length - 1; i >= 0; i--) {
+		view[i].onclick = function() {
+			this.parentNode.parentNode.childNodes[3].scrolling = "auto";
+			this.parentNode.style.display = "none";
+		}
+	}
+})();
+
 (function aboutToggle() {
 	var sect = document.getElementsByClassName("aboutCont");
 	var head = document.getElementsByClassName("aboutHead");
@@ -87,7 +109,7 @@
 			$(this).attr("data-scrollPoint", sP);
 		})
 		windowHeight = window.innerHeight;
-		sect[2].style.height = (window.innerWidth * 1.2) + "px";
+		// sect[2].style.height = (window.innerWidth * 1.2) + "px";
 		pageTop = [
 			0,
 			sect[0].clientHeight,
