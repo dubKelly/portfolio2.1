@@ -14,6 +14,9 @@ html, body {
 		overflow: hidden;
 	}
 }
+::-webkit-scrollbar {
+   width: 0px;
+}
 section {
 	position: relative;
 	width: 100%;
@@ -565,6 +568,7 @@ a svg:hover .linkedIn {
 
 /* Work Sect. */
 .work {
+<<<<<<< HEAD
 	background-color: white;
 }
 .titleCont {
@@ -574,6 +578,66 @@ a svg:hover .linkedIn {
 .title {
 	font-size: 24px;
 	padding: 30px 0;
+=======
+	height: auto;
+	background-color: white;
+}
+.iframeCont {	
+	position: relative;
+	height: 250px;
+	width: 100%;
+}
+.iframeCover {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(38, 38, 38, 0);
+	transition: all 0.3s ease-in-out;
+	z-index: 666;
+}
+.iframeCover:hover {
+	background-color: rgba(38, 38, 38, 0.8);
+}
+.view {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 180px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+.iframeCover:hover .view {
+	opacity: 0.8;
+}
+.view path, .view circle {
+	stroke: #a9a9a9;
+	transition: all 0.3s ease-in-out;
+}
+.view:hover path, .view:hover circle {
+	stroke: #fff;
+}
+.viewHide {
+	position: absolute;
+	height: 60px;
+	top: 0px;
+	left: 20px;
+	cursor: pointer;
+	display: none;
+	transition: all 0.3s ease-in-out;
+}
+.viewHide path {
+	fill: #a9a9a9;	
+}
+.viewHide:hover path {
+	fill: #fff;
+}
+.work iframe {
+	height: 100%;
+	width: 100%;
+	border: none;
+>>>>>>> 8c0331fc141568dc61c9cad302e40cc04a5548c3
 }
 
 
@@ -741,6 +805,25 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 		left: 100%;
 		transform: rotate(0deg) translate(-100%, -100%);
 		padding: 0 20px;
+	}
+}
+@media only screen and (min-width: 640px) {
+	.work {
+		height: 1100px;
+	}
+	.iframeCont, .overviewCont {
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		min-height: 480px;
+	}
+	.iframeCont.meganSoo {
+		top: 0;
+		right: 0;
+	}
+	.iframeCont.goToMovers {
+		top: 50%;
+		left: 0;
 	}
 }
 @media only screen and (min-width: 700px) and (min-height: 700px) {
