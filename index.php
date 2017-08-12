@@ -252,7 +252,7 @@ $newToken = generateFormToken('form1');
 <section id="work" class="work blur hide">
 	<div class="workTitle">
 		<div class="titleCont">
-			<h2>Recent Work</h2>
+			<h2 class="title">Recent Work</h2>
 		</div>
 	</div>
 </section>

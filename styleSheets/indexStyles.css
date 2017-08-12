@@ -565,16 +565,15 @@ a svg:hover .linkedIn {
 
 /* Work Sect. */
 .work {
-	background-color: #262626;
+	background-color: white;
 }
 .titleCont {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	text-align: center;
 }
 .title {
 	font-size: 24px;
+	padding: 30px 0;
 }
 
 
