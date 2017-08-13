@@ -122,6 +122,8 @@
 	var latestScroll = 0;
 	var ticking = false;
 	// var lax = document.getElementsByClassName("lax");
+
+	/* Assign a fade-in point */
 	function xY() {
 		$(".aboutScroll").each(function scrollP() {
 			var offset = $(this).offset();
@@ -196,6 +198,7 @@
 	}
 }());
 
+/* Highlight selected skill section */
 (function skillToggle() {
 	var toggle = document.getElementsByClassName("sToggle");
 	for (var i = toggle.length - 1; i >= 0; i--) {
@@ -208,6 +211,7 @@
 	}
 }());
 
+/* Unstick hover state on iOS */
 (function sticky() {
 	var link = document.getElementsByTagName("a");
 	for (var i = 0; i < link.length; i++) {

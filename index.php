@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 function generateFormToken($form) {
 	$token = md5(uniqid(microtime(), true));
@@ -28,8 +28,8 @@ function check_input($data, $problem='') {
 	return $data;
 }
 function show_error($myError) {
-?> -->
-<!-- 	<html>
+?>
+html>
 	<body>
 	<b>Please correct the following test error:</b><br />
 	<?php echo $myError; ?>
@@ -57,7 +57,7 @@ if (verifyFormToken('form1')) {
 } 
 else {
 }
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -108,9 +108,9 @@ _____________________________________________________________________
 
 -->
 </head>
-<!-- <?php
+<?php
 $newToken = generateFormToken('form1');
-?> -->
+?>
 <body>
 	<div class="goodBurger scroll rock" data-scrollPoint="0">
 		<span></span>
@@ -250,6 +250,7 @@ $newToken = generateFormToken('form1');
 	<svg class="next arrow" enable-background="new 0 0 50 50" height="32px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon class="polygon" fill="#424242" points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg>
 </section>
 <section id="work" class="work blur hide">
+<<<<<<< HEAD
 	<div class="overviewCont meganSoo">
 		<h2 class="workHead">Work</h2>
 		<div class="overview">

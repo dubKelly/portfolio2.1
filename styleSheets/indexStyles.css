@@ -568,6 +568,17 @@ a svg:hover .linkedIn {
 
 /* Work Sect. */
 .work {
+<<<<<<< HEAD
+	background-color: white;
+}
+.titleCont {
+	position: relative;
+	text-align: center;
+}
+.title {
+	font-size: 24px;
+	padding: 30px 0;
+=======
 	height: auto;
 	background-color: white;
 }
@@ -626,6 +637,7 @@ a svg:hover .linkedIn {
 	height: 100%;
 	width: 100%;
 	border: none;
+>>>>>>> 8c0331fc141568dc61c9cad302e40cc04a5548c3
 }
 .overviewCont {
 	padding: 20px;
