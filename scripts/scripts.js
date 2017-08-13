@@ -240,3 +240,14 @@
 		}
 	}
 })();
+
+(function sourceCode() {
+
+	var srcCode = document.getElementsByClassName("viewSource");
+
+	for (var i = srcCode.length - 1; i >= 0; i--) {
+		srcCode[i].onclick = function() {
+			window.open("view-source:" + this.getAttribute("data-srcCode"), "_blank");
+		}
+	}
+})
