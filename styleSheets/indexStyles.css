@@ -460,7 +460,7 @@ a svg:hover .linkedIn {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.aboutHead {
+.aboutHead, .workHead {
 	position: absolute;
 	display: block;
 	font-family: "Poiret One", cursive;
@@ -592,7 +592,7 @@ a svg:hover .linkedIn {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 180px;
+	height: 120px;
 	cursor: pointer;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
@@ -627,7 +627,38 @@ a svg:hover .linkedIn {
 	width: 100%;
 	border: none;
 }
-
+.overviewCont {
+	padding: 20px;
+	text-align: center;
+}
+.workHead {
+	font-size: 80px;
+	top: 110px;
+	left: -50px;
+}
+.overviewHead {
+	text-align: center;
+	font-size: 18px;
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding: 30px 0;
+}
+.overviewCont p, .overviewCont ul {
+	padding: 0 0 30px 0;
+	font-size: 14px;
+}
+p.roll {
+	font-size: 12px;
+	color: #424242;
+}
+p.features {
+	color: black;
+	text-transform: uppercase;
+	padding: 0 0 15px 0;
+}
+.overviewIcon {
+	display: none;
+}
 
 /* Contact Sect. */
 .contact {
@@ -804,6 +835,54 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 		width: 50%;
 		height: 50%;
 		min-height: 480px;
+	}
+	.overviewCont {
+		width: calc(50% - 40px);
+		height: calc(50% - 40px);
+	}
+	.overviewCont.goToMovers {
+		top: 50%;
+		right: 0;
+	}
+	.overview {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.featuresCont {
+		position: relative;
+		height: 138px;
+	}
+	.featureList {
+		position: absolute;
+		width: 100%;
+		/*-webkit-backface-visibility: hidden;*/
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+	.featureList.hide ul li {
+		color: rgba(38, 38, 38, 0);
+	}
+	.overviewIcon {
+		display: inline-block;
+		position: absolute;
+		cursor: pointer;
+		z-index: 666;
+	}
+	.overviewIcon path {
+		fill: #a9a9a9;
+		transition: all 0.3s ease-in-out;
+	}
+	.overviewIcon:hover path {
+		fill: #262626;
+	}
+	.forGeeks {
+		bottom: 6px;
+		right: 75px;
+	}
+	.viewSource {
+		bottom: 15px;
+		right: 25px;
 	}
 	.iframeCont.meganSoo {
 		top: 0;

@@ -222,3 +222,17 @@
 		}
 	}
 }());
+
+(function featureToggle() {
+
+	var forGeeks = document.getElementsByClassName("forGeeks");
+
+	for (var i = forGeeks.length - 1; i >= 0; i--) {
+		forGeeks[i].onclick = function() {
+			var ul = this.parentNode.getElementsByClassName("featureList");
+			for (var i = ul.length - 1; i >= 0; i--) {
+				ul[i].classList.toggle("hide");
+			}
+		}
+	}
+})();

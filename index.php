@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 function generateFormToken($form) {
 	$token = md5(uniqid(microtime(), true));
@@ -28,8 +28,8 @@ function check_input($data, $problem='') {
 	return $data;
 }
 function show_error($myError) {
-?>
-	<html>
+?> -->
+<!-- 	<html>
 	<body>
 	<b>Please correct the following test error:</b><br />
 	<?php echo $myError; ?>
@@ -57,7 +57,7 @@ if (verifyFormToken('form1')) {
 } 
 else {
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -108,9 +108,9 @@ _____________________________________________________________________
 
 -->
 </head>
-<?php
+<!-- <?php
 $newToken = generateFormToken('form1');
-?>
+?> -->
 <body>
 	<div class="goodBurger scroll rock" data-scrollPoint="0">
 		<span></span>
@@ -186,9 +186,9 @@ $newToken = generateFormToken('form1');
 	</div>
 </section>
 <section id="about" class="about blur hide">
-	<h1 class="aboutHead">About</h1>
-	<h1 class="aboutHead skills none">Skills</h1>
-	<h1 class="aboutHead tech none">Tech</h1>
+	<h2 class="aboutHead">About</h2>
+	<h2 class="aboutHead skills none">Skills</h2>
+	<h2 class="aboutHead tech none">Tech</h2>
 	<div class="blurb">
 			<div class="aboutCont intro">
 				<p class="scroll aboutScroll" data-scrollPoint="">Originally from St. Jacobs, I recently moved to Toronto where I spend an unhealthy amount of time coding for the web.</p>
@@ -250,12 +250,83 @@ $newToken = generateFormToken('form1');
 	<svg class="next arrow" enable-background="new 0 0 50 50" height="32px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon class="polygon" fill="#424242" points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg>
 </section>
 <section id="work" class="work blur hide">
-<!-- 	<div class="workTitle">
-		<div class="titleCont">
-			<h2>Recent Work</h2>
+	<div class="overviewCont meganSoo">
+		<h2 class="workHead">Work</h2>
+		<div class="overview">
+			<h2 class="overviewHead">Megan Soo Portfolio</h2>
+			<p class="roll">Design | Development</p>
+			<p>A clean, lightweight portfolio, designed to run fast without sacrificing functionality and media content.</p>
+			<p class="features">Features</p>
+			<div class="featuresCont">
+				<div class="featureList publicList">
+					<ul>
+						<li>Responsive Layout</li>
+						<li>Animated Menu</li>
+						<li>Smooth Scrolling</li>
+						<li>Functional Photo Gallery</li>
+						<li>Embeded YouTube Video</li>
+						<li>Secure Email Contact Form</li>
+					</ul>
+				</div>
+				<div class="featureList geekList hide">
+					<ul>
+						<li>Media Queries</li>
+						<li>SASS</li>
+						<li>JavaScript DOM Traversal/Manipulation</li>
+						<li>PHP Form Validation</li>
+						<li>"no-js" Burger Menu</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div> -->
-	<iframe src="../meganSoo/index.html" scrolling="no"></iframe>
+		<svg class=" overviewIcon forGeeks" height="45" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M465.4,247c-2.2-22-12.4-43-28.9-58.4c-17.1-15.9-39.3-24.7-62.7-24.7c-41.5,0-77.3,27.4-88.5,67c-7-7-18.5-11.7-29.3-11.7  c-10.8,0-22.3,4.7-29.3,11.7c-11.2-39.6-47-67-88.5-67c-23.3,0-45.6,8.7-62.7,24.6C59,204,48.8,225,46.6,247H32v18h14.6  c2.2,22,12.4,43,28.9,58.4c17.1,15.9,39.3,24.7,62.7,24.7c50.8,0,92.1-41.2,92.1-92c0-0.1,0-0.1,0-0.1h0c0-9.9,11.5-21.6,25.7-21.6  s25.7,11.7,25.7,21.6h0c0,0,0,0,0,0.1c0,50.8,41.3,92,92.1,92c23.3,0,45.6-8.7,62.7-24.7c16.5-15.4,26.7-36.5,28.9-58.5H480v-18  H465.4z M373.8,333c-42.5,0-77-34.6-77-77c0-42.5,34.6-77,77-77c42.5,0,77,34.6,77,77C450.8,298.5,416.3,333,373.8,333z M138.2,333  c-42.5,0-77-34.6-77-77c0-42.5,34.6-77,77-77c42.5,0,77,34.6,77,77C215.2,298.5,180.7,333,138.2,333z"/></svg>
+		<svg class="overviewIcon viewSource" height="30" viewBox="0 0 1792 1792" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z"/></svg>
+	</div>
+	<div class="iframeCont meganSoo" data-src="../meganSoo/index.html">
+		<div class="iframeCover">
+			<svg id="Слой_1" class="view" data-index="0" style="enable-background:new 0 0 139 139;" version="1.1" viewBox="0 0 139 139" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+			.st0{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+			.st1{stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+			</style><path class="st0" d="M30.9,69.3c0,0,14.8-18.1,38.6-18.1" id="XMLID_7_"/><path class="st0" d="M108.1,69.3c0,0-14.8-18.1-38.6-18.1" id="XMLID_8_"/><path class="st0" d="M29.3,66.2c0,0,15.4,18.8,40.2,18.8" id="XMLID_10_"/><path class="st0" d="M109.7,66.2c0,0-15.4,18.8-40.2,18.8" id="XMLID_9_"/><circle class="st0" cx="69.5" cy="68.2" id="XMLID_11_" r="10.5"/><circle class="st1" cx="69.5" cy="68.2" id="XMLID_12_" r="2.7"/></svg>
+		</div>
+		<svg class="viewHide" data-index="0" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-21-eye-hidden"><path d="M8.10869891,20.8913011 C4.61720816,18.8301147 3,16 3,16 C3,16 7,9 16,9 C17.3045107,9 18.5039752,9.14706466 19.6014388,9.39856122 L18.7519017,10.2480983 C17.8971484,10.0900546 16.9800929,10 16,10 C8,10 4.19995117,16 4.19995117,16 C4.19995117,16 5.71472808,18.3917225 8.84492713,20.1550729 L8.10869891,20.8913011 L8.10869891,20.8913011 L8.10869891,20.8913011 Z M12.398561,22.601439 C13.4960246,22.8529356 14.6954892,23.0000001 16,23 C25,22.999999 29,16 29,16 C29,16 27.3827918,13.1698856 23.8913008,11.1086992 L23.1550727,11.8449273 C26.2852719,13.6082776 27.8000488,16 27.8000488,16 C27.8000488,16 24,21.999999 16,22 C15.019907,22.0000001 14.1028515,21.9099455 13.2480981,21.7519019 L12.398561,22.601439 L12.398561,22.601439 L12.398561,22.601439 Z M19.8986531,15.1013469 C19.9649658,15.3902115 20,15.6910144 20,16 C20,18.2091391 18.2091391,20 16,20 C15.6910144,20 15.3902115,19.9649658 15.1013469,19.8986531 L16,19 C16.7677669,19.0000001 17.5355339,18.7071068 18.1213203,18.1213203 C18.7071068,17.5355339 19.0000001,16.7677669 19,16 L19.8986531,15.1013469 L19.8986531,15.1013469 L19.8986531,15.1013469 Z M16.8986531,12.1013469 C16.6097885,12.0350342 16.3089856,12 16,12 C13.7908609,12 12,13.7908609 12,16 C12,16.3089856 12.0350342,16.6097885 12.1013469,16.8986531 L13,16 C12.9999999,15.2322331 13.2928932,14.4644661 13.8786797,13.8786797 C14.4644661,13.2928932 15.2322331,12.9999999 16,13 L16.8986531,12.1013469 L16.8986531,12.1013469 L16.8986531,12.1013469 Z M24,7 L7,24 L8,25 L25,8 L24,7 L24,7 Z" id="eye-hidden"/></g></g></svg>
+	</div>
+	<div class="overviewCont goToMovers">
+		<div class="overview">
+			<h2 class="overviewHead">goTO Movers</h2>
+			<p class="roll">Design | Logo | Content | Development</p>
+			<p>An economic, one-stop web solution kept simple for quick (16 hours) development.</p>
+			<p class="features">Features</p>
+			<div class="featuresCont">
+				<div class="featureList publicList">
+					<ul>
+						<li>Responsive Layout</li>
+						<li>Animated Menu</li>
+						<li>Blog</li>
+						<li>Phone Contact</li>
+					</ul>
+				</div>
+				<div class="featureList geekList hide">
+					<ul>
+						<li>Media Queries</li>
+						<li>JavaScript DOM Traversal/Manipulation</li>
+						<li>"no-js" Burger Menu</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<svg class=" overviewIcon forGeeks" height="45" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M465.4,247c-2.2-22-12.4-43-28.9-58.4c-17.1-15.9-39.3-24.7-62.7-24.7c-41.5,0-77.3,27.4-88.5,67c-7-7-18.5-11.7-29.3-11.7  c-10.8,0-22.3,4.7-29.3,11.7c-11.2-39.6-47-67-88.5-67c-23.3,0-45.6,8.7-62.7,24.6C59,204,48.8,225,46.6,247H32v18h14.6  c2.2,22,12.4,43,28.9,58.4c17.1,15.9,39.3,24.7,62.7,24.7c50.8,0,92.1-41.2,92.1-92c0-0.1,0-0.1,0-0.1h0c0-9.9,11.5-21.6,25.7-21.6  s25.7,11.7,25.7,21.6h0c0,0,0,0,0,0.1c0,50.8,41.3,92,92.1,92c23.3,0,45.6-8.7,62.7-24.7c16.5-15.4,26.7-36.5,28.9-58.5H480v-18  H465.4z M373.8,333c-42.5,0-77-34.6-77-77c0-42.5,34.6-77,77-77c42.5,0,77,34.6,77,77C450.8,298.5,416.3,333,373.8,333z M138.2,333  c-42.5,0-77-34.6-77-77c0-42.5,34.6-77,77-77c42.5,0,77,34.6,77,77C215.2,298.5,180.7,333,138.2,333z"/></svg>
+		<svg class="overviewIcon viewSource" height="30" viewBox="0 0 1792 1792" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z"/></svg>
+	</div>
+	<div class="iframeCont goToMovers" data-src="../goTo/movingco/index.html">
+		<div class="iframeCover">
+			<svg id="Слой_1" class="view" data-index="1" style="enable-background:new 0 0 139 139;" version="1.1" viewBox="0 0 139 139" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+			.st0{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+			.st1{stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+			</style><path class="st0" d="M30.9,69.3c0,0,14.8-18.1,38.6-18.1" id="XMLID_7_"/><path class="st0" d="M108.1,69.3c0,0-14.8-18.1-38.6-18.1" id="XMLID_8_"/><path class="st0" d="M29.3,66.2c0,0,15.4,18.8,40.2,18.8" id="XMLID_10_"/><path class="st0" d="M109.7,66.2c0,0-15.4,18.8-40.2,18.8" id="XMLID_9_"/><circle class="st0" cx="69.5" cy="68.2" id="XMLID_11_" r="10.5"/><circle class="st1" cx="69.5" cy="68.2" id="XMLID_12_" r="2.7"/></svg>
+		</div>
+		<svg class="viewHide" data-index="1" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#929292" id="icon-21-eye-hidden"><path d="M8.10869891,20.8913011 C4.61720816,18.8301147 3,16 3,16 C3,16 7,9 16,9 C17.3045107,9 18.5039752,9.14706466 19.6014388,9.39856122 L18.7519017,10.2480983 C17.8971484,10.0900546 16.9800929,10 16,10 C8,10 4.19995117,16 4.19995117,16 C4.19995117,16 5.71472808,18.3917225 8.84492713,20.1550729 L8.10869891,20.8913011 L8.10869891,20.8913011 L8.10869891,20.8913011 Z M12.398561,22.601439 C13.4960246,22.8529356 14.6954892,23.0000001 16,23 C25,22.999999 29,16 29,16 C29,16 27.3827918,13.1698856 23.8913008,11.1086992 L23.1550727,11.8449273 C26.2852719,13.6082776 27.8000488,16 27.8000488,16 C27.8000488,16 24,21.999999 16,22 C15.019907,22.0000001 14.1028515,21.9099455 13.2480981,21.7519019 L12.398561,22.601439 L12.398561,22.601439 L12.398561,22.601439 Z M19.8986531,15.1013469 C19.9649658,15.3902115 20,15.6910144 20,16 C20,18.2091391 18.2091391,20 16,20 C15.6910144,20 15.3902115,19.9649658 15.1013469,19.8986531 L16,19 C16.7677669,19.0000001 17.5355339,18.7071068 18.1213203,18.1213203 C18.7071068,17.5355339 19.0000001,16.7677669 19,16 L19.8986531,15.1013469 L19.8986531,15.1013469 L19.8986531,15.1013469 Z M16.8986531,12.1013469 C16.6097885,12.0350342 16.3089856,12 16,12 C13.7908609,12 12,13.7908609 12,16 C12,16.3089856 12.0350342,16.6097885 12.1013469,16.8986531 L13,16 C12.9999999,15.2322331 13.2928932,14.4644661 13.8786797,13.8786797 C14.4644661,13.2928932 15.2322331,12.9999999 16,13 L16.8986531,12.1013469 L16.8986531,12.1013469 L16.8986531,12.1013469 Z M24,7 L7,24 L8,25 L25,8 L24,7 L24,7 Z" id="eye-hidden"/></g></g></svg>
+	</div>
 </section>
 <section id="contact" class="contact blur hide">
 	<div class="contactWrap">
