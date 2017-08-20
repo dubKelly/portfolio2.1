@@ -240,30 +240,3 @@
 		}
 	}
 })();
-
-(function fizzBuzz() {
-
-	var output;
-
-	function printOutput(fizz, buzz) {
-		for (i = 1; i <= 100; i++) {
-			
-			output = "";
-
-			if (i % fizz === 0) {
-				output = "Fizz";
-			}
-			if (i % buzz === 0) {
-				output += "Buzz";
-			}
-			console.log(!output);
-			if (!output) {
-				output = i;
-			}
-			// console.log(output);
-		}
-	}
-
-	printOutput(3, 5);
-
-})();
