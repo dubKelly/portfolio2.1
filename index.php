@@ -54,7 +54,7 @@ if (verifyFormToken('form1')) {
 	mail($myemail, $subject, $message);
 	header('Location: index.php');
 	exit();
-} 
+}
 else {
 }
 ?>
@@ -230,17 +230,19 @@ $newToken = generateFormToken('form1');
 				<div class="right">
 					<ul class="scroll aboutScroll" data-scrollPoint="">
 						<li>HTML5</li>
-						<li>CSS3/SASS</li>
-						<li>JavaScript/jQuery</li>
+						<li>CSS3/Sass</li>
+						<li>JavaScript/ES6/jQuery/AJAX</li>
+						<li>React</li>
 						<li>PHP</li>
 					</ul>
 				</div>
 				<div class="left">
 					<ul class="scroll aboutScroll" data-scrollPoint="">
 						<li class="focus">Ubuntu</li>
-						<li class="focus">Sublime/Emmet</li>
-						<li class="focus">Apache/PhpMyAdmin</li>
-						<li class="focus">Git</li>
+						<li class="focus">Sublime/Atom/Emmet</li>
+						<li class="focus">Apache</li>
+						<li class="focus">Webpack</li>
+						<li class="focus">Git/GitHub</li>
 						<li class="focus">Gimp/DarkTable</li>
 						<li class="focus">cmatrix</li>
 					</ul>
